@@ -96,7 +96,7 @@
                 </p>
 
                 <p class="hero-expertise" data-aos="fade-up" data-aos-delay="700">
-                    Expertise unique : 25 ans Manufacturing + 6 ans Computer Vision LVMH
+                    Expertise unique : 25 ans Manufacturing + 6 ans Computer Vision chez LVMH - Parfums Christian Dior
                 </p>
 
                 <div class="hero-ctas" data-aos="fade-up" data-aos-delay="900">
@@ -791,12 +791,6 @@
                     <a href="#contact" class="btn btn-cta-primary">Demander un Audit</a>
                 </div>
 
-                <p class="cta-ou">ou</p>
-
-                <a href="mailto:contact@inference-design.fr?subject=Demande d'information Computer Vision" class="btn btn-cta-secondary">
-                    Envoyer un email
-                </a>
-
                 <div class="cta-divider-bottom"></div>
             </div>
         </section>
@@ -807,7 +801,7 @@
                 <h2 class="section-title" data-aos="fade-up">Demande d'Audit ou de Contact</h2>
 
                 <div class="contact-grid">
-                    <!-- Formulaire Nextcloud (Colonne gauche) -->
+                    <!-- Formulaire Netlify (Colonne gauche 60%) -->
                     <div class="contact-form" data-aos="fade-right">
                         <div class="form-intro">
                             <p>
@@ -819,55 +813,104 @@
                             </p>
                         </div>
 
-                        <!-- Iframe Nextcloud Forms -->
-                        <div class="iframe-container">
-                            <iframe
-                                src="https://nx89774.your-storageshare.de/apps/formvox/embed/1395/v7tkH8NDHLrlQCY"
-                                width="100%"
-                                height="900px"
-                                frameborder="0"
-                                style="border: none; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
-                                loading="lazy">
-                            </iframe>
+                        <!-- FORMULAIRE NETLIFY -->
+                        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="netlify-form">
+                            <input type="hidden" name="form-name" value="contact" />
+                            <p class="hidden">
+                                <label>Ne pas remplir: <input name="bot-field" /></label>
+                            </p>
 
-                            <!-- Message de fallback si iframe ne charge pas -->
-                            <noscript>
-                                <div class="form-fallback" style="
-                                    padding: 40px;
-                                    background: #f8f9fa;
-                                    border-radius: 8px;
-                                    text-align: center;
-                                    margin-top: 20px;
-                                ">
-                                    <p style="color: #2C3E50; font-size: 16px; margin-bottom: 20px;">
-                                        Votre navigateur ne supporte pas les iframes ou a bloqué leur affichage.
-                                    </p>
-                                    <p style="color: #2C3E50; font-size: 16px;">
-                                        Vous pouvez accéder directement au formulaire en cliquant sur ce lien :
-                                    </p>
-                                    <a
-                                        href="https://nx89774.your-storageshare.de/apps/formvox/embed/1395/v7tkH8NDHLrlQCY"
-                                        style="
-                                            display: inline-block;
-                                            background-color: #D4AF37;
-                                            color: #0A1F2E;
-                                            padding: 12px 24px;
-                                            border-radius: 6px;
-                                            font-weight: 600;
-                                            margin-top: 15px;
-                                            text-decoration: none;
-                                        "
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Ouvrir le formulaire dans un nouvel onglet
-                                    </a>
+                            <div class="form-group">
+                                <label for="entreprise">Votre entreprise <span class="required">*</span></label>
+                                <input type="text" id="entreprise" name="entreprise" placeholder="Nom de votre entreprise" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nom">Votre nom complet <span class="required">*</span></label>
+                                <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fonction">Votre fonction</label>
+                                <input type="text" id="fonction" name="fonction" placeholder="Ex: Directeur Industriel, Responsable Qualité...">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email professionnel <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="prenom.nom@entreprise.fr" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telephone">Téléphone</label>
+                                <input type="tel" id="telephone" name="telephone" placeholder="+33 6 XX XX XX XX">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="demande">Votre demande concerne <span class="required">*</span></label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="demande" value="Audit faisabilité nouveau projet" required> Audit faisabilité nouveau projet</label>
+                                    <label><input type="radio" name="demande" value="Optimisation système existant" required> Optimisation système existant</label>
+                                    <label><input type="radio" name="demande" value="POC / Preuve de concept" required> POC / Preuve de concept</label>
+                                    <label><input type="radio" name="demande" value="Autre / Demande d'information" required> Autre / Demande d'information</label>
                                 </div>
-                            </noscript>
-                        </div>
-                    </div>
+                            </div>
 
-                    <!-- Informations Contact (Colonne droite) -->
+                            <div class="form-group">
+                                <label for="projet">Décrivez votre projet <span class="required">*</span></label>
+                                <textarea id="projet" name="projet" rows="5" placeholder="Type de défauts à détecter, volumes, contraintes spécifiques, problèmes rencontrés..." required minlength="50" maxlength="1000"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="secteur">Secteur d'activité <span class="required">*</span></label>
+                                <select id="secteur" name="secteur" required>
+                                    <option value="">Sélectionnez votre secteur</option>
+                                    <option value="Manufacturing / Luxe">Manufacturing / Luxe</option>
+                                    <option value="Logistique / Supply Chain">Logistique / Supply Chain</option>
+                                    <option value="Agroalimentaire">Agroalimentaire</option>
+                                    <option value="Pharmaceutique">Pharmaceutique</option>
+                                    <option value="Automobile">Automobile</option>
+                                    <option value="Électronique">Électronique</option>
+                                    <option value="Cosmétique">Cosmétique</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="delai">Délai envisagé</label>
+                                <select id="delai" name="delai">
+                                    <option value="">Sélectionnez un délai</option>
+                                    <option value="Urgent (< 1 mois)">Urgent (< 1 mois)</option>
+                                    <option value="Court terme (1-3 mois)">Court terme (1-3 mois)</option>
+                                    <option value="Moyen terme (3-6 mois)">Moyen terme (3-6 mois)</option>
+                                    <option value="Exploration / Pas de délai précis">Exploration / Pas de délai précis</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="source">Comment avez-vous connu Inférence Design ?</label>
+                                <select id="source" name="source">
+                                    <option value="">Sélectionnez une option</option>
+                                    <option value="Recherche Google">Recherche Google</option>
+                                    <option value="LinkedIn">LinkedIn</option>
+                                    <option value="Recommandation professionnelle">Recommandation professionnelle</option>
+                                    <option value="Article / Publication">Article / Publication</option>
+                                    <option value="Événement professionnel">Événement professionnel</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="rgpd" name="rgpd" required>
+                                <label for="rgpd">J'accepte d'être contacté par Inférence Design concernant ma demande et j'ai lu la <a href="#confidentialite" target="_blank" rel="noopener noreferrer">politique de confidentialité</a> <span class="required">*</span></label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
+                        </form>
+                        <!-- FIN FORMULAIRE NETLIFY -->
+                    </div>
+                    <!-- FIN contact-form -->
+
+                    <!-- Informations Contact (Colonne droite 40%) -->
                     <div class="contact-info" data-aos="fade-left" data-aos-delay="200">
                         <div class="info-bloc">
                             <h3>Comment nous contacter</h3>
@@ -879,7 +922,6 @@
                             <h3>Délais de Réponse</h3>
                             <ul class="info-list">
                                 <li>• Formulaire : < 48h ouvrées</li>
-                                <li>• Email direct : < 72h ouvrées</li>
                             </ul>
                         </div>
 
@@ -923,7 +965,10 @@
                             </p>
                         </div>
                     </div>
+                    <!-- FIN contact-info -->
+
                 </div>
+                <!-- FIN contact-grid -->
             </div>
         </section>
 
@@ -960,7 +1005,6 @@
                         <ul class="footer-links">
                             <li><a href="#realisations">Cas d'usage</a></li>
                             <li><a href="#apropos">À propos</a></li>
-                            <li><a href="https://www.linkedin.com/in/davidbriaud" target="_blank">LinkedIn</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>

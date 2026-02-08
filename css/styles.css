@@ -212,7 +212,16 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, var(--bleu-marine-fonce) 0%, var(--bleu-marine-tres-fonce) 100%);
+
+    /* Image de fond */
+    background-image: url('../assets/images/hero-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Fallback si image ne charge pas */
+    background-color: var(--bleu-marine-fonce);
+
     color: var(--blanc);
     margin-top: 60px;
 }
@@ -223,7 +232,8 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    /* MODIFIEZ l'opacité pour voir l'image */
+    background-color: rgba(15, 42, 63, 0.7); /* 70% opacité au lieu de 40% */
     z-index: 1;
 }
 
@@ -1815,4 +1825,118 @@ section {
     color: #888888;
     margin-top: var(--space-sm);
 }
+/* === STYLE FORMULAIRE NETLIFY === */
+.netlify-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--bleu-marine);
+    margin-bottom: 8px;
+}
+
+.form-group .required {
+    color: var(--rouge-alerte);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid var(--gris-bordure);
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: var(--font-primary);
+    color: var(--gris-anthracite);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--or);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: 400; /* Moins gras pour les labels radio */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.1); /* Agrandir un peu les radios */
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 4px; /* Alignement avec le texte */
+    transform: scale(1.1);
+}
+
+.checkbox-group label {
+    font-weight: 400; /* Moins gras pour les labels checkbox */
+    margin-bottom: 0;
+}
+
+.checkbox-group label a {
+    color: var(--or);
+    text-decoration: underline;
+}
+
+.checkbox-group label a:hover {
+    color: var(--or-fonce);
+}
+
+.netlify-form button[type="submit"] {
+    margin-top: var(--space-md);
+    width: auto; /* Bouton pas à 100% de large */
+    align-self: flex-start; /* Aligner le bouton à gauche */
+}
+
+/* Masquer le champ honeypot */
+.netlify-form .hidden {
+    display: none;
+}
+
+/* Style de succès ou erreur (à ajouter via JS si besoin) */
+.form-success, .form-error {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.form-success {
+    background-color: var(--vert-succes);
+    color: var(--blanc);
+}
+
+.form-error {
+    background-color: var(--rouge-alerte);
+    color: var(--blanc);
+}
