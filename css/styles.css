@@ -1952,3 +1952,242 @@ legend {
     color: var(--bleu-marine);
     margin-bottom: 8px;
 }
+/* ========================================
+   OPTIMISATIONS MOBILE SPÉCIFIQUES
+   ======================================== */
+
+/* === SECTION PROBLÉMATIQUES (3 cartes) === */
+@media (max-width: 768px) {
+    .problemes-section .cards-grid {
+        grid-template-columns: 1fr; /* 1 colonne au lieu de 3 */
+        gap: 25px;
+    }
+
+    .problemes-section .card {
+        padding: 30px 20px; /* Padding réduit */
+    }
+
+    .problemes-section .card-icon {
+        font-size: 40px; /* Icône légèrement réduite */
+    }
+
+    .problemes-section .card-title {
+        font-size: 18px; /* Titre plus petit */
+    }
+
+    .problemes-section .card-list li {
+        font-size: 15px; /* Texte liste plus petit */
+        line-height: 1.6;
+    }
+
+    .problemes-section .card-impact {
+        font-size: 16px; /* Impact réduit */
+        margin-top: 20px;
+    }
+}
+
+/* === SECTION EXPERTISE (Timeline) === */
+@media (max-width: 1024px) {
+    /* Tablet : Stack vertical progressif */
+    .expertise-grid {
+        grid-template-columns: 1fr; /* 1 colonne */
+        gap: 40px;
+    }
+
+    /* Timeline passe en horizontal sur tablet */
+    .timeline {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+    .timeline::before {
+        /* Ligne horizontale au lieu de verticale */
+        left: 0;
+        right: 0;
+        top: 50%;
+        width: 100%;
+        height: 2px;
+        transform: translateY(-50%);
+    }
+
+    .timeline-item {
+        flex: 1;
+        max-width: 180px;
+    }
+
+    .timeline-year {
+        font-size: 16px;
+    }
+
+    .timeline-label {
+        font-size: 12px;
+    }
+
+    .timeline-desc {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile : Timeline verticale simplifiée */
+    .expertise-section .section-title {
+        font-size: 24px;
+        line-height: 1.3;
+        padding: 0 10px;
+    }
+
+    .expertise-grid {
+        gap: 30px;
+    }
+
+    /* Badges */
+    .expertise-badge {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+
+    /* Colonnes expertise */
+    .expertise-col {
+        padding: 25px 20px;
+    }
+
+    .expertise-col h3 {
+        font-size: 19px;
+        line-height: 1.4;
+    }
+
+    .expertise-subtitle {
+        font-size: 14px;
+    }
+
+    .expertise-highlight {
+        font-size: 15px;
+    }
+
+    .expertise-list h4 {
+        font-size: 13px;
+    }
+
+    .expertise-list ul li {
+        font-size: 14px;
+    }
+
+    /* Timeline mobile : Retour vertical compact */
+    .timeline {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0;
+    }
+
+    .timeline::before {
+        /* Ligne verticale fine à gauche */
+        left: 20px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        height: 100%;
+        transform: none;
+    }
+
+    .timeline-item {
+        padding-left: 50px;
+        position: relative;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        left: 12px;
+        top: 0;
+    }
+
+    .timeline-year {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .timeline-label {
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .timeline-desc {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    /* Bandeau résultat */
+    .expertise-result {
+        padding: 25px 20px;
+    }
+
+    .result-main {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .result-sub {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+/* === MOBILE TRÈS PETIT (< 480px) === */
+@media (max-width: 480px) {
+    /* Problématiques */
+    .problemes-section .card {
+        padding: 25px 15px;
+    }
+
+    .problemes-section .card-title {
+        font-size: 17px;
+    }
+
+    .problemes-section .card-list li {
+        font-size: 14px;
+    }
+
+    /* Expertise */
+    .expertise-section .section-title {
+        font-size: 20px;
+    }
+
+    .expertise-col h3 {
+        font-size: 17px;
+    }
+
+    .expertise-subtitle {
+        font-size: 13px;
+    }
+
+    .expertise-highlight {
+        font-size: 14px;
+    }
+
+    .expertise-list ul li {
+        font-size: 13px;
+    }
+
+    .timeline-year {
+        font-size: 16px;
+    }
+
+    .timeline-label {
+        font-size: 12px;
+    }
+
+    .timeline-desc {
+        font-size: 11px;
+    }
+
+    .result-main {
+        font-size: 15px;
+    }
+
+    .result-sub {
+        font-size: 13px;
+    }
+}
