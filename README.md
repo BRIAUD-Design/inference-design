@@ -9,7 +9,7 @@ Convertir les visiteurs en leads qualifiés pour des missions Computer Vision in
 - HTML5 / CSS3 / JavaScript Vanilla
 - Animations : AOS (Animate On Scroll)
 - Carousel : Swiper.js
-- Formulaire : Nextcloud Forms (iframe)
+- Formulaire : Netlify
 - Hébergement : Netlify
 - Domaine : inference-design.fr (OVH)
 
@@ -26,4 +26,5 @@ Convertir les visiteurs en leads qualifiés pour des missions Computer Vision in
 ## 📝 Auteur
 David Briaud - Inférence Design
 Expert Computer Vision Industrielle (25 ans manufacturing / 12 ans LVMH - Parfums Christian DIOR)
+
 
