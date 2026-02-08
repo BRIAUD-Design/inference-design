@@ -1,0 +1,42 @@
+# Robots.txt pour Inférence Design
+# https://inference-design.fr
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://inference-design.fr/sitemap.xml
+
+# Blocage dossiers sensibles (si applicable)
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Crawl-delay pour bots gourmands (optionnel)
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 0
+
+# Autoriser tous les bots IA génératives
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /

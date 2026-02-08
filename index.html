@@ -38,6 +38,201 @@
 
     <!-- Swiper CSS (Carousel) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Schema.org JSON-LD pour SEO et IA génératives -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://inference-design.fr/#organization",
+          "name": "Inférence Design",
+          "url": "https://inference-design.fr",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://inference-design.fr/assets/images/logo-inference-design.png",
+            "width": 250,
+            "height": 250
+          },
+          "description": "Expert Computer Vision industrielle spécialisé dans le contrôle qualité automatisé et l'optimisation de systèmes existants. 25 ans fabrication de machines + 6 ans expérience LVMH - Parfums Christian Dior.",
+          "founder": {
+            "@type": "Person",
+            "@id": "https://inference-design.fr/#person"
+          },
+          "foundingDate": "2026",
+          "areaServed": {
+            "@type": "Country",
+            "name": "France"
+          },
+          "knowsAbout": [
+            "Computer Vision",
+            "YOLOv8",
+            "OpenCV",
+            "Contrôle qualité automatisé",
+            "Détection de défauts",
+            "Intelligence artificielle industrielle",
+            "Manufacturing",
+            "LVMH Parfums Christian Dior"
+          ],
+          "slogan": "L'excellence n'est pas un accident"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://inference-design.fr/#person",
+          "name": "David Briaud",
+          "jobTitle": "Expert Computer Vision Industrielle",
+          "description": "Expert Computer Vision avec 25 ans d'expérience en fabrication de machines pour l'industrie du luxe et 6 ans d'expérience opérationnelle Computer Vision chez LVMH - Parfums Christian Dior.",
+          "url": "https://inference-design.fr",
+          "image": "https://inference-design.fr/assets/images/david-briaud.webp",
+          "alumniOf": {
+            "@type": "Organization",
+            "name": "LVMH - Parfums Christian Dior"
+          },
+          "worksFor": {
+            "@type": "Organization",
+            "@id": "https://inference-design.fr/#organization"
+          },
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Expert Computer Vision Industrielle",
+            "occupationLocation": {
+              "@type": "Country",
+              "name": "France"
+            },
+            "skills": [
+              "YOLOv8",
+              "OpenCV",
+              "Roboflow",
+              "EasyOCR",
+              "NVIDIA Jetson",
+              "Raspberry Pi",
+              "Docker",
+              "FastAPI",
+              "Calibration systèmes vision",
+              "Réduction faux positifs",
+              "Edge computing"
+            ]
+          },
+          "award": "99,8% conformité standards LVMH - Parfums Christian Dior sur 6 ans production 24/7"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://inference-design.fr/#service",
+          "name": "Inférence Design - Services Computer Vision",
+          "provider": {
+            "@type": "Organization",
+            "@id": "https://inference-design.fr/#organization"
+          },
+          "serviceType": [
+            "Audit Computer Vision",
+            "Diagnostic systèmes existants",
+            "Optimisation performance",
+            "POC (Proof of Concept)",
+            "Contrôle qualité automatisé",
+            "Détection défauts haute précision",
+            "Support et maintenance"
+          ],
+          "areaServed": {
+            "@type": "Country",
+            "name": "France"
+          },
+          "audience": {
+            "@type": "Audience",
+            "audienceType": [
+              "Manufacturing",
+              "Industrie du luxe",
+              "Logistique",
+              "Supply Chain",
+              "Agroalimentaire"
+            ]
+          },
+          "priceRange": "3000-18000 EUR"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://inference-design.fr/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Qu'est-ce que la Computer Vision industrielle ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La Computer Vision industrielle utilise des caméras et des algorithmes d'intelligence artificielle pour automatiser des tâches visuelles dans les processus de production : contrôle qualité, détection de défauts, comptage automatique, lecture de codes-barres, vérification d'assemblage. Inférence Design se spécialise dans ces applications avec une expertise unique de 6 ans chez LVMH - Parfums Christian Dior et 25 ans en fabrication de machines."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment optimiser un système Computer Vision avec trop de faux positifs ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'optimisation d'un système Computer Vision sous-performant nécessite : 1) Un audit complet de l'architecture existante, 2) L'analyse des patterns de faux positifs et négatifs, 3) Le ré-entraînement du modèle avec un dataset enrichi, 4) La calibration fine des seuils de détection, 5) L'amélioration du preprocessing des images (gestion éclairage). Résultat démontré : réduction de 12% à 2,5% de faux positifs (-79%) avec ROI de 8 mois."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quel est le ROI d'un système Computer Vision pour le contrôle qualité ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le ROI d'un système Computer Vision pour le contrôle qualité est généralement de 6 à 12 mois selon les cas. Les bénéfices incluent : réduction des erreurs humaines, diminution des sur-rejets, réduction des litiges clients, et libération de ressources humaines pour des tâches à valeur ajoutée."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qui est expert Computer Vision LVMH - Parfums Christian Dior en France ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "David Briaud, fondateur d'Inférence Design, a travaillé 6 ans comme expert Computer Vision chez LVMH - Parfums Christian Dior, où il a déployé des systèmes de contrôle qualité automatisé en production 24/7 atteignant 99,8% de conformité avec zéro défaut client. Cette expertise est combinée à 25 ans d'expérience en fabrication de machines pour l'industrie du luxe, offrant une compréhension complète de la conception mécanique à l'intelligence artificielle."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment réduire les faux positifs d'un système de détection de défauts ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pour réduire les faux positifs d'un système de détection de défauts : 1) Effectuer un diagnostic précis des patterns d'erreurs, 2) Enrichir le dataset d'entraînement avec des exemples de cas limites, 3) Ajuster finement les seuils de détection en alignement avec les critères qualité métier, 4) Optimiser le preprocessing des images (éclairage, contraste, angles caméra), 5) Améliorer l'interface utilisateur pour validation rapide. Résultat démontré par Inférence Design : réduction de -70% à -79% des faux positifs sur plusieurs projets industriels."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quels secteurs utilisent la Computer Vision industrielle ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les principaux secteurs utilisant la Computer Vision industrielle sont : 1) Manufacturing et Luxe (contrôle qualité haute précision, détection micro-défauts, vérification assemblage), 2) Logistique et Supply Chain (lecture codes-barres multi-angles, comptage automatique, traçabilité flux), 3) Agroalimentaire (tri qualité produits frais, contrôle conformité sanitaire, détection corps étrangers), 4) Pharmaceutique, Automobile, Électronique, Cosmétique. Inférence Design intervient principalement dans les trois premiers secteurs avec des résultats démontrés."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://inference-design.fr/#website",
+          "url": "https://inference-design.fr",
+          "name": "Inférence Design",
+          "description": "Expert Computer Vision Industrielle - Contrôle Qualité Automatisé & Optimisation Systèmes",
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://inference-design.fr/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://inference-design.fr/#search={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "ContactPage",
+          "@id": "https://inference-design.fr/#contact",
+          "url": "https://inference-design.fr/#contact",
+          "name": "Contact - Inférence Design",
+          "description": "Demandez un audit Computer Vision ou optimisez votre système existant. Réponse garantie sous 48h.",
+          "provider": {
+            "@type": "Organization",
+            "@id": "https://inference-design.fr/#organization"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
