@@ -2191,3 +2191,33 @@ legend {
         font-size: 13px;
     }
 }
+/* Amélioration espacement vertical mobile */
+@media (max-width: 768px) {
+    .card-list {
+        margin: 20px 0;
+    }
+
+    .card-list li {
+        margin-bottom: 10px; /* Plus d'espace entre items */
+        padding-left: 22px; /* Plus d'espace pour le bullet */
+    }
+
+    /* Impact en couleur plus visible */
+    .card-impact {
+        font-size: 17px;
+        padding: 12px;
+        background-color: rgba(231, 76, 60, 0.1); /* Fond léger rouge */
+        border-radius: 6px;
+        border-left: 4px solid var(--rouge-alerte);
+    }
+
+    .card:nth-child(2) .card-impact {
+        background-color: rgba(230, 126, 34, 0.1);
+        border-left-color: var(--orange-alerte);
+    }
+
+    .card:nth-child(3) .card-impact {
+        background-color: rgba(52, 152, 219, 0.1);
+        border-left-color: var(--bleu-info);
+    }
+}
