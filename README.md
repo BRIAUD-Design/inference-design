@@ -27,4 +27,3 @@ Convertir les visiteurs en leads qualifiés pour des missions Computer Vision in
 David Briaud - Inférence Design
 Expert Computer Vision Industrielle (25 ans manufacturing / 12 ans LVMH - Parfums Christian DIOR)
 
-contact@inference-design.fr
