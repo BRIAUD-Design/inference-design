@@ -1,112 +1,53 @@
-# ==============================================
-# HEADERS NETLIFY - INFÉRENCE DESIGN
-# ==============================================
+# ========================================
+# _headers - Netlify
+# Inférence Design
+# ========================================
 
-# Headers pour TOUTES les pages
+# Règles pour toutes les pages
 /*
-  # ---- SÉCURITÉ ----
-
-  # Empêche l'affichage du site dans une iframe (protection clickjacking)
+  # Sécurité
   X-Frame-Options: SAMEORIGIN
-
-  # Force le navigateur à respecter le type MIME déclaré
   X-Content-Type-Options: nosniff
-
-  # Active la protection XSS du navigateur
   X-XSS-Protection: 1; mode=block
-
-  # Contrôle les informations envoyées via le header Referer
   Referrer-Policy: strict-origin-when-cross-origin
 
-  # Politique de sécurité du contenu (CSP) - optionnel mais recommandé
-  # Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;
-
-  # Permissions Policy (anciennement Feature-Policy)
+  # Permissions API
   Permissions-Policy: geolocation=(), microphone=(), camera=()
 
-  # ---- PERFORMANCE ----
+# Cache pour CSS (1 mois)
+/*.css
+  Cache-Control: public, max-age=2592000, immutable
 
-  # Cache pour 1 an (fichiers statiques avec hash de version)
+# Cache pour JS (1 mois)
+/*.js
+  Cache-Control: public, max-age=2592000, immutable
+
+# Cache pour images (1 an)
+/*.webp
   Cache-Control: public, max-age=31536000, immutable
 
-  # ---- SEO ----
-
-  # Déclare la langue principale du contenu
-  Content-Language: fr
-
-  # ---- COMPRESSION ----
-
-  # Active la compression Brotli/Gzip (géré automatiquement par Netlify)
-  # Pas besoin de header spécifique
-
-
-# ==============================================
-# Headers spécifiques pour les fichiers HTML
-# ==============================================
-/*.html
-  # Cache plus court pour HTML (1 heure) car contenu peut changer
-  Cache-Control: public, max-age=3600, must-revalidate
-
-  # Type de contenu explicite
-  Content-Type: text/html; charset=utf-8
-
-
-# ==============================================
-# Headers pour les IMAGES
-# ==============================================
-/assets/images/*
-  # Cache très long (1 an) car les images changent rarement
+/*.jpg
   Cache-Control: public, max-age=31536000, immutable
 
-  # Permet le lazy loading cross-origin
-  Cross-Origin-Resource-Policy: cross-origin
-
-
-# ==============================================
-# Headers pour les FONTS (polices)
-# ==============================================
-/assets/fonts/*
-  # Cache très long (1 an)
+/*.jpeg
   Cache-Control: public, max-age=31536000, immutable
 
-  # CORS nécessaire pour les fonts
-  Access-Control-Allow-Origin: *
-
-
-# ==============================================
-# Headers pour CSS et JS
-# ==============================================
-/css/*
+/*.png
   Cache-Control: public, max-age=31536000, immutable
-  Content-Type: text/css; charset=utf-8
 
-/js/*
+/*.svg
   Cache-Control: public, max-age=31536000, immutable
-  Content-Type: application/javascript; charset=utf-8
 
+# Cache pour fonts (1 an)
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
 
-# ==============================================
-# Headers pour SITEMAP et ROBOTS
-# ==============================================
-/sitemap.xml
-  Content-Type: application/xml; charset=utf-8
-  Cache-Control: public, max-age=3600
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
 
-/robots.txt
-  Content-Type: text/plain; charset=utf-8
-  Cache-Control: public, max-age=86400
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
 
-
-# ==============================================
-# Headers pour MANIFEST PWA
-# ==============================================
-/site.webmanifest
-  Content-Type: application/manifest+json; charset=utf-8
-  Cache-Control: public, max-age=86400
-
-
-# ==============================================
-# Redirection www vers non-www (optionnel)
-# ==============================================
-# https://www.inference-design.fr/*
-#   X-Robots-Tag: noindex
+# Cache pour PDF (1 mois)
+/*.pdf
+  Cache-Control: public, max-age=2592000
