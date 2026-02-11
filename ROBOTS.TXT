@@ -1,42 +1,63 @@
-# Robots.txt pour Inférence Design
+# ========================================
+# Robots.txt - Inférence Design
 # https://inference-design.fr
+# ========================================
 
+# Autoriser tous les robots (Google, Bing, IA génératives)
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://inference-design.fr/sitemap.xml
+# ========================================
+# ROBOTS IA GÉNÉRATIVES (ChatGPT, Claude, Perplexity, etc.)
+# ========================================
 
-# Blocage dossiers sensibles (si applicable)
-Disallow: /admin/
-Disallow: /.git/
-Disallow: /node_modules/
-
-# Crawl-delay pour bots gourmands (optionnel)
-User-agent: Googlebot
-Crawl-delay: 0
-
-User-agent: Bingbot
-Crawl-delay: 0
-
-# Autoriser tous les bots IA génératives
+# OpenAI (ChatGPT)
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
 User-agent: Claude-Web
 Allow: /
 
-User-agent: anthropic-ai
+# Perplexity
+User-agent: PerplexityBot
 Allow: /
 
+# Google Bard/Gemini
 User-agent: Google-Extended
 Allow: /
 
-User-agent: CCBot
+User-agent: GoogleOther
 Allow: /
 
-User-agent: PerplexityBot
+# Bing AI
+User-agent: bingbot
 Allow: /
+
+# ========================================
+# INTERDICTIONS (fichiers sensibles)
+# ========================================
+
+# Bloquer les fichiers admin/config si nécessaire
+Disallow: /admin/
+Disallow: /config/
+Disallow: /*.json$
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Autoriser explicitement les assets
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# ========================================
+# SITEMAP
+# ========================================
+Sitemap: https://inference-design.fr/sitemap.xml

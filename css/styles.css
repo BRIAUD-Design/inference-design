@@ -2727,6 +2727,253 @@ textarea:focus-visible {
 }
 
 /* ========================================
+   SECTION À PROPOS - NOUVELLES CLASSES
+   ======================================== */
+
+/* Liste parcours sobre */
+.parcours-simple {
+    list-style: none;
+    margin: var(--space-md) 0;
+}
+
+.parcours-simple li {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+    padding-left: 20px;
+    position: relative;
+    color: var(--gris-anthracite);
+}
+
+.parcours-simple li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--or);
+    font-weight: 700;
+}
+
+/* Mise en avant période clé (2019-2025) */
+.parcours-simple li.parcours-highlight {
+    background-color: var(--gris-tres-clair);
+    padding: var(--space-sm);
+    padding-left: 30px;
+    border-radius: 6px;
+    border-left: 4px solid var(--or);
+    margin: var(--space-md) 0;
+    font-weight: 600;
+}
+
+.parcours-simple li.parcours-highlight::before {
+    left: 10px;
+}
+
+/* Mission sobre */
+.apropos-mission {
+    background-color: var(--gris-tres-clair);
+    padding: var(--space-md);
+    border-radius: 8px;
+    margin-bottom: var(--space-lg);
+}
+
+.apropos-mission h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--bleu-marine);
+    margin-bottom: var(--space-sm);
+}
+
+.apropos-mission p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: var(--space-sm);
+}
+
+.apropos-mission p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   RESPONSIVE - PARCOURS
+   ======================================== */
+
+@media (max-width: 768px) {
+    .parcours-simple li {
+        font-size: 14px;
+        padding-left: 18px;
+    }
+
+    .parcours-simple li.parcours-highlight {
+        padding: 12px;
+        padding-left: 25px;
+    }
+
+    .apropos-mission {
+        padding: var(--space-sm);
+    }
+
+    .apropos-mission p {
+        font-size: 14px;
+    }
+}
+/* ========================================
+   LIEN FORMULAIRE À PROPOS
+   ======================================== */
+.link-formulaire {
+    color: var(--or);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--or);
+    transition: all var(--transition-normal);
+    display: inline-block;
+}
+
+.link-formulaire:hover {
+    color: var(--or-fonce);
+    border-bottom-color: var(--or-fonce);
+    transform: translateX(3px);
+}
+
+/* ========================================
+   SECTION FAQ
+   ======================================== */
+.faq-section {
+    background-color: var(--blanc);
+    padding: var(--space-xxl) 0;
+}
+
+.faq-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.faq-item {
+    background-color: var(--blanc);
+    border: 1px solid var(--gris-bordure);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-color: var(--or);
+}
+
+.faq-question {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--bleu-marine);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-sm);
+    transition: all var(--transition-normal);
+}
+
+.faq-question:hover {
+    color: var(--or);
+}
+
+.faq-icon {
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--or);
+    transition: transform var(--transition-normal);
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 1000px;
+    padding: 0 var(--space-lg) var(--space-lg) var(--space-lg);
+}
+
+.faq-answer p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--gris-anthracite);
+    margin-bottom: var(--space-sm);
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer ul,
+.faq-answer ol {
+    margin: var(--space-sm) 0 var(--space-md) var(--space-md);
+}
+
+.faq-answer ul li,
+.faq-answer ol li {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.faq-answer ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--or);
+    font-weight: 700;
+}
+
+.faq-answer ol li {
+    padding-left: 0;
+}
+
+.faq-answer strong {
+    color: var(--bleu-marine);
+    font-weight: 600;
+}
+
+/* Responsive FAQ */
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 16px;
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .faq-icon {
+        font-size: 24px;
+    }
+
+    .faq-answer p {
+        font-size: 15px;
+    }
+
+    .faq-answer ul li,
+    .faq-answer ol li {
+        font-size: 14px;
+    }
+}
+
+
+/* ========================================
    FIN DU FICHIER
    ======================================== */
 

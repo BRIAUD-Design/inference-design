@@ -1,0 +1,13 @@
+# ========================================
+# _redirects - Netlify
+# Inférence Design
+# ========================================
+
+# Redirection www → non-www (ou inverse)
+https://www.inference-design.fr/*  https://inference-design.fr/:splat  301!
+
+# Redirection anciennes URLs (si tu en as)
+# /old-page  /new-page  301
+
+# Page 404 personnalisée (si tu la crées)
+# /*  /404.html  404
