@@ -208,3 +208,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Gestion des tabs Solutions (Nouveau / Existant)
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-btn-compact');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+
+            // Retirer active de tous les boutons et contenus
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Ajouter active au bouton cliqué
+            this.classList.add('active');
+
+            // Afficher le contenu correspondant
+            const targetContent = document.getElementById('tab-' + targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+});
