@@ -3373,3 +3373,161 @@ textarea:focus-visible {
    ======================================== */
 
 
+
+/* ========================================
+   CORRECTIFS MOBILE — MARS 2026
+   ======================================== */
+
+/* === TABS SOLUTIONS — WRAPPING MOBILE === */
+@media (max-width: 768px) {
+    .solutions-tabs-compact {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 var(--space-sm);
+    }
+
+    .tab-btn-compact {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+        flex: 1 1 auto;
+        text-align: center;
+        min-width: 120px;
+    }
+}
+
+/* === HERO DIVIDER — OVERFLOW FIX === */
+@media (max-width: 768px) {
+    .hero-divider {
+        font-size: 10px;
+        letter-spacing: -1px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-divider {
+        display: none;
+    }
+}
+
+/* === HERO CONTENT — PADDING PETIT ÉCRAN === */
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 0 var(--space-sm);
+    }
+
+    .hero-lvmh {
+        font-size: 12px;
+        padding: 0 var(--space-sm);
+    }
+
+    .hero-ctas {
+        padding: 0 var(--space-sm);
+    }
+}
+
+/* === TECH TAGS — WRAP GARANTI === */
+@media (max-width: 768px) {
+    .tech-tags {
+        gap: 8px;
+    }
+
+    .tech-tag {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* === FAQ — PETIT MOBILE === */
+@media (max-width: 480px) {
+    .faq-question {
+        font-size: 14px;
+        padding: 14px var(--space-sm);
+        line-height: 1.4;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 var(--space-sm) var(--space-sm);
+    }
+
+    .faq-answer p {
+        font-size: 13px;
+    }
+
+    .faq-answer ul li,
+    .faq-answer ol li {
+        font-size: 13px;
+    }
+}
+
+/* === NAVIGATION HAMBURGER — animation gérée par main.js (inline styles) === */
+
+/* === CONTAINER — PETIT MOBILE === */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--space-sm);
+    }
+
+    section {
+        padding: var(--space-lg) 0;
+    }
+}
+
+/* === CARD FOOTER COMPACT — ALIGNEMENT === */
+@media (max-width: 480px) {
+    .card-footer-compact {
+        gap: 8px;
+    }
+
+    .card-meta-compact {
+        font-size: 0.8rem;
+    }
+
+    .btn-compact {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+/* === SWIPER BUTTONS — PETIT ÉCRAN === */
+@media (max-width: 480px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 30px;
+        height: 30px;
+        --swiper-navigation-size: 18px;
+    }
+}
+
+/* === FOOTER GRID — TRÈS PETIT ÉCRAN === */
+@media (max-width: 480px) {
+    .footer-copyright {
+        font-size: 11px;
+    }
+
+    .mantra-footer-text {
+        font-size: 13px;
+        padding: 0 var(--space-sm);
+    }
+}
+
+/* === SECTION TITRE — OVERFLOW SAFE === */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 22px;
+        padding: 0 var(--space-sm);
+        word-break: break-word;
+    }
+
+    .section-subtitle {
+        font-size: 15px;
+        padding: 0 var(--space-sm);
+    }
+}
+
+/* ========================================
+   FIN CORRECTIFS MOBILE
+   ======================================== */
